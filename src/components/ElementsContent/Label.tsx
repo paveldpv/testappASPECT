@@ -1,7 +1,7 @@
-import React, { useMemo,memo } from 'react'
+import { useMemo, memo } from 'react'
 import { TLabel } from '../../Types'
 
-type Props = {}
+
 
  function Label({caption="void",visible=false}: Partial<TLabel>) {
 

@@ -15,7 +15,7 @@ export class ValidatorField {
 	private _arrDataText: string[] = []
 	private regEx = new RegExp(/[A-Za-z]/)
 	private _parseResult: TDataContent
-	private error: TError
+	// private error: TError
 
 	constructor(str: string, path?: string) {
 		this._value = str
@@ -23,9 +23,9 @@ export class ValidatorField {
 		this._dataString = str.replace(/'/g, '')
 		this._arrDataText = this._dataString.split('')
 		this._parseResult = { content: [] }
-		this.error = {
-			error: false,
-		}
+		// this.error = {
+		// 	error: false,
+		// }
 	}
 	private linePreparation() {
 		let word = ''
@@ -227,6 +227,8 @@ export class ValidatorField {
 		}
 
 		for (const key in content) {
+			console.log(key);
+			
 			if ('content' in content) {
 				//{},[]
 				if (!Array.isArray(content.content)) {
