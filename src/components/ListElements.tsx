@@ -7,9 +7,9 @@ export default function ListElements({ content }: TDataContent) {
 			{content.map((elContent, index) =>
 				'content' in elContent ? (
 					
-					<ListElements content={elContent.content} key={index}/>
+					<ListElements content={elContent.content} key={Math.random()}/>
 				) : (
-					<>{BunchOfElements(elContent, index*index)}</>
+					<>{BunchOfElements(elContent, index)}</>
 				)
 			)}
 		</div>
