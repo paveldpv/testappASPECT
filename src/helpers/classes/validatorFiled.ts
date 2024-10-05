@@ -59,6 +59,8 @@ export class ValidatorField {
 
 	private isValidStructure(): TError {
 		try {
+			console.log(this._dataString);
+			
 			this._parseResult = JSON.parse(this._dataString)
 
 			return {
@@ -261,6 +263,7 @@ export class ValidatorField {
 	}
 
 	public isValidValue(): TError | { value: any; path?: string } {
+		
 		if (this._path) {
 			const lastProperty = this._path.split('.')
 			const isLastPath = this.propertyContentElement.some(

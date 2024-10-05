@@ -8,9 +8,10 @@ import { TButton } from '../../Types'
 		if(typeof visible ==='boolean'){
 			return visible
 		}
-		visible==="true"?true:false
+	 return	visible==="true"?true:false
 	},[visible])
-
+	
+	
 
 	return (
 		<button
