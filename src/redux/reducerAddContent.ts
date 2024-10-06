@@ -41,10 +41,11 @@ export const addContent = (state = initialState, action: { type: ACTION; payload
 				
 				const { value, path } = action.payload
 				const copyState = JSON.parse(JSON.stringify(state))
+				const newContent = setValueByPath(copyState, path, value)
 				//формально state больше не изменяется
 				return {
-					content: [...setValueByPath(copyState, path, value).content],
-					// content: [...state.content]
+					...state,content:newContent.content
+					
 				}
 			} else {
 				const { value } = action.payload
